@@ -1,42 +1,78 @@
-#Código para la Unión de Conjuntos
+#ejercicio nro1
 
-#A = {1, 2, 3, 4, 5}
-#B = {4, 5, 6, 7, 8}
+def dividir():
+    try:
+        num1 = float(input("Ingrese el primer número: "))
+        num2 = float(input("Ingrese el segundo número: "))
+        resultado = num1 / num2
+        print("El resultado de la división es:", resultado)
+    except ZeroDivisionError:
+        print("Error: No se puede dividir por cero")
+    except ValueError:
+        print("Error: Debe ingresar un número válido")
 
-#union = A.union(B)
 
-#print("La unión de los conjuntos A y B es:", union)
+dividir()
 
-#Código para la Intersección de Conjuntos.
+#ejercicio nro 2
 
-#A = {1, 2, 3, 4, 5}
-#B = {4, 5, 6, 7, 8}
+def sumar():
+    try:
+        num = input("Ingrese un número: ")
+        cad = input("Ingrese una cadena: ")
+        resultado = int(num) + cad
+        print("El resultado de la suma es:", resultado)
+    except TypeError:
+        print("Error: No se puede sumar un número y una cadena")
+    except ValueError:
+        print("Error: Debe ingresar un número válido")
 
-#interseccion = A & B
 
-#print("La intersección de los conjuntos A y B es:", interseccion)
+sumar()
 
-#Código para la Diferencia de Conjuntos
+#ejercicio nro 3
 
-#A = {1, 2, 3, 4, 5}
-#B = {4, 5, 6, 7, 8}
+def acceder_diccionario():
+    try:
+        diccionario = {"nombre": "Juan", "edad": 30}
+        clave = input("Ingrese una clave: ")
+        valor = diccionario[clave]
+        print("El valor de la clave es:", valor)
+    except KeyError:
+        print("Error: La clave no existe en el diccionario")
 
-#diferencia_simétrica = A ^ B
 
-#print("La diferencia simétrica de los conjuntos A y B es:", diferencia_simétrica)
+acceder_diccionario()
 
-#Código para Verificar si un Conjunto es un Subconjunto de Otro 
+#ejercico nro4
 
-#A = {1, 2, 3}
-#B = {1, 2, 3, 4, 5}
+def abrir_archivo():
+    try:
+        nombre_archivo = input("Ingrese el nombre del archivo: ")
+        with open(nombre_archivo, "r") as archivo:
+            contenido = archivo.read()
+            print("El contenido del archivo es:", contenido)
+    except FileNotFoundError:
+        print("Error: El archivo no existe. Se creará un nuevo archivo.")
+        with open(nombre_archivo, "w") as archivo:
+            archivo.write("Este es un archivo nuevo.")
+            print("El archivo ha sido creado con éxito.")
 
-#if A.issubset(B):
-    #print("El conjunto A es un subconjunto de B")
-#else:
-    #print("El conjunto A no es un subconjunto de B")
 
-#Código para Imprimir el Número de Elementos de un Conjunto en Python
+abrir_archivo()
 
-A = {1, 2, 3, 4, 5}
+#ejercico nro5
 
-print("El número de elementos del conjunto A es:", len(A))
+def dividir():
+    try:
+        num1 = float(input("Ingrese el primer número: "))
+        num2 = float(input("Ingrese el segundo número: "))
+        resultado = num1 / num2
+        print("El resultado de la división es:", resultado)
+    except ZeroDivisionError:
+        print("Error: No se puede dividir por cero")
+    except ValueError:
+        print("Error: Debe ingresar un número válido")
+
+
+dividir()
